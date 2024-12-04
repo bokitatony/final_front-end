@@ -1,0 +1,87 @@
+/* Estilo base */
+.container_contactos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Espacio entre los elementos */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+  height: 80px;
+  width: 100%;
+  max-width: 400px; /* El ancho máximo del contenedor */
+  padding: 10px;
+}
+
+.container_contactos h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.container_contactos img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.texto_mensaje p {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.mensaje_info {
+  display: flex;
+}
+
+.texto_inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .container_contactos {
+      flex-direction: column; /* Apilar los elementos */
+      align-items: flex-start;
+      width: 100%; /* Ancho completo en pantallas pequeñas */
+  }
+
+  .container_contactos h2 {
+      font-size: 18px; /* Reducir el tamaño del texto */
+  }
+
+  .container_contactos img {
+      width: 40px; /* Reducir el tamaño de la imagen */
+      height: 40px;
+  }
+
+  .texto_inferior {
+      width: 100%; /* Ancho completo */
+      justify-content: space-between;
+  }
+
+  .texto_mensaje p {
+      font-size: 14px; /* Reducir tamaño del texto */
+  }
+}
+
+/* Media Query para pantallas medianas (tabletas) */
+@media (max-width: 900px) {
+  .container_contactos {
+      width: 90%; /* 90% del ancho disponible */
+      max-width: 500px;
+  }
+
+  .container_contactos img {
+      width: 45px; /* Tamaño intermedio */
+      height: 45px;
+  }
+
+  .texto_inferior {
+      width: 280px; /* Ajuste del ancho de los textos */
+  }
+
+  .texto_mensaje p {
+      font-size: 15px; /* Ajustar tamaño de la fuente */
+  }
+}

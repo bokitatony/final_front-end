@@ -1,16 +1,19 @@
-import React from "react"
+
+import React from "react";
+import WhatsApp from "./screm/whatsapp/whatsapp";
+
+
+
 
 
 function App() {
-
-
   return (
-    <>
-    <h1>hola mundo</h1> 
-    <h3>hola como estas</h3>
-    <h3>hola soy tony</h3>
-    </>
-  )
+    <div>
+      <WhatsApp/>
+
+
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,13 +1,12 @@
 import React from 'react';
-import StatusIcon from '../../helpers/condicionvisto/condisiondevisto'; 
+import StatusIcon from '../../helpers/condicionvisto/condisiondevisto';
 import './LisHTML.css';
 
-const LisHTML = ({ mensajes, avatar, nombre, id }) => {
+const LisHTML = ({ mensajes, avatar, nombre, id, onSeleccionar }) => {
   return (
-    <div className="workspace-item">
-      <div className="container_contactos"> 
+    <div className="workspace-item" onClick={onSeleccionar}>
+      <div className="container_contactos">
         <img src={avatar} alt="" />
-
         <div className="texto_mensaje">
           <h2>{nombre}</h2>
           {mensajes.length > 0 && (

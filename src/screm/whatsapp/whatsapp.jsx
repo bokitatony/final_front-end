@@ -6,10 +6,11 @@ import ListaMensajes from '../../componentes/listademensajes/listamensaje/listaM
 
 
 
+
 function WhatsApp() {
   return (
     <div className='container_whatsapp'>
-      <ListaMensajes/>
+      <ListaMensajes />
     </div>
     
 

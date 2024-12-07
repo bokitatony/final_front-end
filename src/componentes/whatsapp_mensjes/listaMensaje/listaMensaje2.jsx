@@ -1,29 +1,29 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom"; // Para navegar y obtener el id
-import contactos from "../../../data/data"; // O donde tengas los datos
+import { useParams, useNavigate } from "react-router-dom"; 
+import contactos from "../../../data/data"; 
 import ListaMensajes from "../../listademensajes/listamensaje/listaMensajes";
 
 
 const Whatsapp_mensaje = () => {
-  const { workspace_id } = useParams(); // Extraemos el id del contacto de la URL
-  const navigate = useNavigate(); // Para navegar entre rutas
+  const { workspace_id } = useParams(); 
+  const navigate = useNavigate(); 
 
-  // Buscar el contacto por id
+
   const contacto = contactos.find((contacto) => contacto.id === parseInt(workspace_id));
 
-  // Si no encontramos el contacto, redirigimos a la página principal
+
   if (!contacto) {
-    navigate("/"); // Redirige si no existe el contacto
+    navigate("/");
     return null;
   }
 
   return (
     <div className="conatiner_cntenido1">
-      {/* Lista de contactos */}
-      <ListaMensajes /> {/* La lista de contactos sigue siendo visible */}
+
+      <ListaMensajes /> 
       
       <div className="color_white">
-        {/* Mostramos el chat del contacto seleccionado */}
+  
         <div className="mensaje-container">
           <h2>Mensajes de {contacto.nombre}</h2>
           <div>

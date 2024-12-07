@@ -11,7 +11,7 @@ const ListMap = ({ contactos, onContactoSeleccionado }) => {
           mensajes={contacto.mensajes}
           avatar={contacto.avatar}
           id={contacto.id}
-          onSeleccionar={() => onContactoSeleccionado(contacto.id)} // Agregamos la función de selección
+          onSeleccionar={() => onContactoSeleccionado(contacto.id)} 
         />
       ))}
     </div>

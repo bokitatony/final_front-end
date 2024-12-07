@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 
 const Whatsapp_mensajemap = ({ contacto }) => {
-  // Estado para manejar el input del mensaje y la lista de mensajes
+
   const [nuevoMensaje, setNuevoMensaje] = useState("");
   const [mensajes, setMensajes] = useState(contacto.mensajes);
 
-  // Función para agregar el mensaje al chat
-  const agregarMensaje = () => {
-    if (nuevoMensaje.trim() === "") return; // Validar que no sea vacío
 
+  const agregarMensaje = () => {
+    if (nuevoMensaje.trim() === "") return; 
     const mensajeNuevo = {
-      id: mensajes.length + 1, // Generar un ID único
-      emisor: "Yo", // O el nombre del usuario actual
+      id: mensajes.length + 1, 
+      emisor: "Yo", 
       texto: nuevoMensaje,
-      hora: new Date().toLocaleTimeString(), // Hora actual
+      hora: new Date().toLocaleTimeString(), 
       status: "enviado",
     };
 
-    setMensajes([...mensajes, mensajeNuevo]); // Agregar al array
-    setNuevoMensaje(""); // Limpiar el input
+    setMensajes([...mensajes, mensajeNuevo]); 
   };
 
   return (

@@ -19,15 +19,15 @@ const ListaMensajes = () => {
 
   return (
     <div className="conatiner_cntenido1">
-      {/* Lista de contactos */}
+   
       <ListMap contactos={contactos} onContactoSeleccionado={manejarSeleccionContacto} />
       
       <div className="color_white">
-        {/* Si hay un contacto seleccionado, mostramos los mensajes */}
+   
         {contactoSeleccionado ? (
           <Whatsapp_mensajemap contacto={contactoSeleccionado} />
         ) : (
-          <DescargaWhat /> // Si no hay contacto seleccionado, mostramos el componente de descarga
+          <DescargaWhat /> 
         )}
       </div>
     </div>
